@@ -1,1 +1,1 @@
-# Matematiska_metoder
+# Statistiska_metoder
