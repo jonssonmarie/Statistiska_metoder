@@ -5,6 +5,7 @@
 # import libraries
 import numpy as np
 import pandas as pd
+import os
 import matplotlib.pyplot as plt
 import scipy.stats as scs
 from scipy.stats import f
@@ -51,7 +52,9 @@ print(1 - scs.f.cdf(8.1199, 2, 27))
 # Butikslayout med scipy stats
 # Customers, Major, Gig = None, None, None
 Store_Layout, Interaction, Blockdata = None, None, None
-with pd.ExcelFile(r"/Users/mariejonsson/GitHub/Statistiska_metoder_Marie_Jonsson/data/Kap9.xlsx") as reader:
+target_path = '../data'
+
+with pd.ExcelFile(os.path.join(target_path, 'kap9.xlsx')) as reader:
     Store_Layout = pd.read_excel(reader, sheet_name='Store_Layout')
     Interaction = pd.read_excel(reader, sheet_name='Interaction')
     Blockdata = pd.read_excel(reader, sheet_name='Blockdata')
